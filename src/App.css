@@ -237,6 +237,27 @@
   pointer-events: none;
 }
 
+
+.hero-portrait {
+  -webkit-mask-image: linear-gradient(
+          to bottom,
+          #000 0%,
+          #000 78%,
+          rgb(0 0 0 / 85%) 86%,
+          rgb(0 0 0 / 35%) 94%,
+          transparent 100%
+  );
+  mask-image: linear-gradient(
+          to bottom,
+          #000 0%,
+          #000 78%,
+          rgb(0 0 0 / 85%) 86%,
+          rgb(0 0 0 / 35%) 94%,
+          transparent 100%
+  );
+}
+
+
 /* Full circular typography behind the portrait */
 
 .orbit-type {
