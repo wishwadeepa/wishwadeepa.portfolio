@@ -45,9 +45,23 @@ function Hero() {
                     and the small details that make a difference.
                 </p>
 
-                <a className="text-link" href="#projects">
-                    EXPLORE MY WORK <span>↗</span>
-                </a>
+                <div className="hero-actions">
+                    <a className="text-link" href="#projects">
+                        EXPLORE MY WORK <span>↗</span>
+                    </a>
+
+                    <a
+                        className="cv-link"
+                        href="/assets/Sharada%20Wishwadeepa%20CV.pdf"
+                        download="Sharada Wishwadeepa CV.pdf"
+                        aria-label="Download Sharada Wishwadeepa's CV as a PDF"
+                    >
+                        <span>DOWNLOAD CV</span>
+                        <span className="cv-link-icon" aria-hidden="true">
+                            ↓
+                        </span>
+                    </a>
+                </div>
 
                 <div className="hero-index">
                     <span>01 / 06</span>
@@ -75,11 +89,21 @@ function Hero() {
                             textLength="1194"
                             lengthAdjust="spacing"
                         >
-                            * UI/UX DESIGNER * FULL STACK WEB DEVELOPER * MOBILE APP DEVELOPER .
+                            UI/UX DESIGNER * FULL STACK WEB DEVELOPER *
+                            MOBILE APP DEVELOPER.
                         </textPath>
                     </text>
                 </svg>
 
+                {/* Blurred layer behind the portrait */}
+                <img
+                    className="hero-portrait-blur"
+                    src="/assets/heroBW1.png"
+                    alt=""
+                    aria-hidden="true"
+                />
+
+                {/* Main portrait */}
                 <img
                     className="hero-portrait"
                     src="/assets/heroBW1.png"
@@ -109,8 +133,8 @@ function Hero() {
             </a>
 
             <span className="hero-side-label" aria-hidden="true">
-        OBSERVE · QUESTION · CREATE
-      </span>
+                OBSERVE · QUESTION · CREATE
+            </span>
         </section>
     )
 }
