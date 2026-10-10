@@ -4,15 +4,21 @@
 ======================================== */
 
 .site-header {
-  position: relative;
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   width: 100%;
   min-height: 86px;
   padding: 0 6.2%;
-  border-bottom: 1px solid var(--line);
-  background: var(--paper);
+  border-bottom: 1px solid rgb(30 30 30 / 8%);
+  background: rgb(247 246 242 / 90%);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  transition:
+          background-color 180ms ease,
+          border-color 180ms ease;
 }
 
 .identity-mark,
@@ -1604,8 +1610,9 @@
 
 @media (max-width: 650px) {
   .site-header {
-    position: relative;
-    z-index: 20;
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
 
   .mobile-menu-toggle {
