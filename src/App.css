@@ -1562,3 +1562,158 @@
   background-position: 0 0;
   opacity: 0.65;
 }
+
+
+/* ========================================
+   MOBILE NAVIGATION — CIRCULAR MENU
+======================================== */
+
+
+.mobile-menu-toggle {
+  display: none;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-left: auto;
+  padding: 0;
+  border: 1px solid var(--red);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--red);
+  cursor: pointer;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.mobile-menu-toggle:hover {
+  background: transparent;
+  color: var(--red);
+}
+
+.mobile-menu-toggle:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 4px;
+}
+
+
+.mobile-navigation {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .site-header {
+    position: relative;
+    z-index: 20;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+  }
+
+  .mobile-navigation {
+    position: absolute;
+    z-index: 30;
+    top: calc(100% + 8px);
+    right: 6%;
+    display: flex;
+    width: min(300px, 88vw);
+    flex-direction: column;
+    padding: 8px 18px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    box-shadow: 0 14px 35px rgb(0 0 0 / 10%);
+    animation: mobile-menu-enter 180ms ease-out both;
+  }
+
+  .mobile-navigation a {
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr) 20px;
+    align-items: center;
+    gap: 12px;
+    min-height: 53px;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+    font-family: var(--technical);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    transition: color 160ms ease;
+  }
+
+  .mobile-navigation a:last-child {
+    border-bottom: 0;
+  }
+
+  .mobile-navigation a:hover,
+  .mobile-navigation a:focus-visible {
+    color: var(--red);
+  }
+
+  .mobile-navigation a:focus-visible {
+    outline: 1px solid var(--red);
+    outline-offset: -2px;
+  }
+
+  .mobile-navigation-number {
+    color: var(--red);
+    font-size: 9px;
+    font-weight: 400;
+  }
+}
+
+@keyframes mobile-menu-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   CONTACT ARROWS — CONSISTENT SVG ICONS
+======================================== */
+
+.contact-method-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  color: var(--red);
+  transition:
+          color 180ms ease,
+          transform 180ms ease;
+}
+
+.contact-method-arrow-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.contact-method:hover .contact-method-arrow {
+  color: #fff;
+  transform: translate(2px, -2px);
+}
+
+.contact-method-icon svg {
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu-toggle,
+  .mobile-navigation,
+  .mobile-navigation a,
+  .contact-method-arrow {
+    animation: none;
+    transition: none;
+  }
+}

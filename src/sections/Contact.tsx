@@ -13,7 +13,7 @@ const contactMethods = [
         label: 'PHONE',
         detail: 'Give me a call',
         href: 'tel:+94XXXXXXXXX',
-        symbol: '↗',
+        symbol: 'phone',
         external: false,
     },
     {
@@ -31,6 +31,47 @@ const contactMethods = [
         external: true,
     },
 ]
+
+function ExternalArrow() {
+    return (
+        <svg
+            className="contact-method-arrow-icon"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="none"
+            aria-hidden="true"
+        >
+            <path
+                d="M7 17L17 7M8 7H17V16"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
+    )
+}
+
+function PhoneIcon() {
+    return (
+        <svg
+            viewBox="0 0 24 24"
+            width="17"
+            height="17"
+            fill="none"
+            aria-hidden="true"
+        >
+            <path
+                d="M7.2 3.8H5.1A1.6 1.6 0 0 0 3.5 5.5C4.2 13.5 10.5 19.8 18.5 20.5A1.6 1.6 0 0 0 20.2 18.9V16.8L15.8 15.3L14.4 17.2A14.1 14.1 0 0 1 6.8 9.6L8.7 8.2L7.2 3.8Z"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
+    )
+}
 
 function Contact() {
     return (
@@ -68,10 +109,16 @@ function Contact() {
                     >
                         <span className="contact-method-top" aria-hidden="true">
                             <span className="contact-method-icon">
-                                {method.symbol}
+                                {method.symbol === 'phone' ? (
+                                    <PhoneIcon />
+                                ) : (
+                                    method.symbol
+                                )}
                             </span>
 
-                            <span className="contact-method-arrow">↗</span>
+                            <span className="contact-method-arrow">
+                                <ExternalArrow />
+                            </span>
                         </span>
 
                         <span>
