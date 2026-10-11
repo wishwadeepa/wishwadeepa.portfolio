@@ -1,6 +1,7 @@
 
 import Header from './components/Header'
 import Footer from './components/Footer'
+import CursorGlow from './components/CursorGlow'
 
 import Hero from './sections/Hero'
 import About from './sections/About'
@@ -12,22 +13,23 @@ import Contact from './sections/Contact'
 import './App.css'
 
 function App() {
-  return (
-      <>
-        <Header />
+    return (
+        <>
+            <CursorGlow />
+            <Header />
 
-        <main>
-          <Hero />
-          <About />
-          <Skills />
-          <Projects />
-          <Awards />
-          <Contact />
-        </main>
+            <main>
+                <Hero />
+                <About />
+                <Skills />
+                <Projects />
+                <Awards />
+                <Contact />
+            </main>
 
-        <Footer />
-      </>
-  )
+            <Footer />
+        </>
+    )
 }
 
 export default App
