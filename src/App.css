@@ -1840,3 +1840,370 @@
     display: none;
   }
 }
+
+/* ========================================
+   DOTO MICRO-TYPOGRAPHY — READABILITY PASS
+   Keeps the technical look while improving
+   the smallest labels and metadata.
+======================================== */
+
+.header-caption {
+  font-size: 12px;
+  font-weight: 700;
+  color: #555550;
+  letter-spacing: 0.65px;
+}
+
+.header-caption span {
+  color: #696963;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.45px;
+}
+
+.hero-index,
+.project-category,
+.project-meta,
+.section-heading,
+.section-aside,
+.placeholder-label,
+.contact-bottom,
+.site-footer > span,
+.site-footer > a,
+.contact-method-label,
+.contact-method-detail,
+.header-caption,
+.header-caption span {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+.hero-index,
+.project-category,
+.project-meta,
+.placeholder-label,
+.contact-bottom,
+.site-footer > span,
+.site-footer > a,
+.contact-method-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.55px;
+}
+
+.section-heading {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.45px;
+}
+
+.section-aside {
+  color: #777770;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+}
+
+.project-category,
+.project-meta,
+.placeholder-label,
+.hero-index {
+  color: #686862;
+}
+
+.project-category,
+.hero-index span:not(:first-child) {
+  color: #686862;
+}
+
+.contact-method-detail {
+  color: #686862;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+}
+
+/* Small technology tags: improve legibility without
+   making them compete with headings or descriptions. */
+.skill-tags span {
+  color: #62625c;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+/* Keep compact labels readable on mobile too. */
+@media (max-width: 650px) {
+  .header-caption {
+    font-size: 10px;
+  }
+
+  .header-caption span {
+    font-size: 9px;
+  }
+
+  .hero-index,
+  .project-category,
+  .project-meta,
+  .placeholder-label,
+  .contact-bottom,
+  .site-footer > span,
+  .site-footer > a,
+  .contact-method-label {
+    font-size: 9px;
+  }
+
+  .section-heading {
+    font-size: 10px;
+  }
+
+  .section-aside,
+  .contact-method-detail {
+    font-size: 9px;
+  }
+
+  .skill-tags span {
+    font-size: 9px;
+  }
+}
+
+/* ========================================
+   FINAL TECH TAG READABILITY OVERRIDES
+   Applies to technology chips in capability
+   cards and any project cards reusing .skill-tags.
+======================================== */
+
+.skill-tags span,
+.project-item .skill-tags span,
+.project-tech-tags span,
+.project-technologies span,
+.project-tags span {
+  color: #62625c;
+  font-family: var(--technical);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  line-height: 1.6;
+  -webkit-font-smoothing: auto;
+  text-rendering: auto;
+}
+
+@media (max-width: 650px) {
+  .skill-tags span,
+  .project-item .skill-tags span,
+  .project-tech-tags span,
+  .project-technologies span,
+  .project-tags span {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.05px;
+  }
+}
+
+
+/* ========================================
+   FINAL SMALL DOTO TEXT INK / CONTRAST FIX
+   Darker ink and slightly stronger strokes so
+   tiny technical labels don't look faded.
+======================================== */
+
+.header-caption,
+.header-caption span,
+.main-nav a,
+.mobile-contact,
+.eyebrow,
+.hero-index,
+.text-link,
+.cv-link,
+.visual-label,
+.hero-side-label,
+.section-heading,
+.section-aside,
+.item-number,
+.item-arrow,
+.skill-tags span,
+.project-number,
+.project-category,
+.project-meta,
+.placeholder-label,
+.contact-eyebrow,
+.contact-link,
+.contact-bottom,
+.site-footer > span,
+.site-footer > a,
+.contact-method-label,
+.contact-method-detail {
+  color: #4f4e49;
+  font-weight: 600;
+  -webkit-font-smoothing: auto;
+  text-shadow: 0 0 0.25px currentColor;
+}
+
+/* Preserve the portfolio's signature red for interactive labels. */
+.main-nav a,
+.mobile-contact,
+.text-link,
+.text-link span,
+.cv-link,
+.cv-link-icon,
+.item-number,
+.item-arrow,
+.project-number,
+.placeholder-label {
+  color: var(--red);
+}
+
+/* The date beneath the portfolio title is intentionally muted,
+   but should still read clearly at normal browser zoom. */
+.header-caption span,
+.hero-index,
+.section-aside,
+.project-category,
+.project-meta,
+.contact-bottom,
+.site-footer > span,
+.site-footer > a,
+.contact-method-detail {
+  color: #5f5e58;
+  font-weight: 500;
+}
+
+/* Technology chips: clearer text while retaining the fine outline. */
+.skill-tags span,
+.project-item .skill-tags span,
+.project-tech-tags span,
+.project-technologies span,
+.project-tags span {
+  color: #484741;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.12px;
+  line-height: 1.6;
+  text-shadow: 0 0 0.3px currentColor;
+}
+
+@media (max-width: 650px) {
+  .skill-tags span,
+  .project-item .skill-tags span,
+  .project-tech-tags span,
+  .project-technologies span,
+  .project-tags span {
+    font-size: 9.5px;
+    font-weight: 600;
+  }
+}
+
+
+/* ========================================
+   FINAL CONTRAST PASS — SUBTEXT + CONTACT
+======================================== */
+
+/* Keep small supporting text on ivory surfaces
+   as legible as the stronger header labels. */
+.header-caption span,
+.hero-index,
+.hero-side-label,
+.visual-label,
+.section-aside,
+.project-category,
+.project-meta,
+.placeholder-label,
+.site-footer > span,
+.site-footer > a {
+  color: #5b5954;
+  font-weight: 600;
+  text-shadow: 0 0 0.25px currentColor;
+}
+
+/* On the red contact surface, supporting text should
+   remain warm white instead of switching to dark grey. */
+.contact-section .section-heading,
+.contact-section .section-aside,
+.contact-section .section-number,
+.contact-eyebrow,
+.contact-description,
+.contact-bottom,
+.site-footer > span,
+.site-footer > a {
+  color: rgb(255 250 243 / 94%);
+  text-shadow: 0 0 0.25px currentColor;
+}
+
+.contact-section .section-rule,
+.contact-bottom {
+  border-color: rgb(255 250 243 / 45%);
+}
+
+.contact-section .section-rule {
+  background-color: rgb(255 250 243 / 45%);
+}
+
+/* Contact cards: red typography on white cards,
+   with white glyphs inside solid red icon circles. */
+.contact-method {
+  background: #fff;
+  color: var(--red);
+  border-color: rgb(255 255 255 / 92%);
+}
+
+.contact-method-label {
+  color: var(--red);
+  font-weight: 700;
+  text-shadow: 0 0 0.25px currentColor;
+}
+
+.contact-method-detail {
+  color: #625e59;
+  font-weight: 600;
+  text-shadow: 0 0 0.2px currentColor;
+}
+
+.contact-method-icon {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+
+.contact-method-arrow {
+  color: var(--red);
+}
+
+/* Hover: card blends into the red contact section.
+   Text and arrow turn white; the icon gets a white outline
+   and keeps its white glyph for a crisp contrast. */
+.contact-method:hover {
+  background: transparent;
+  border-color: rgb(255 255 255 / 90%);
+  color: #fff;
+}
+
+.contact-method:hover .contact-method-label,
+.contact-method:hover .contact-method-detail,
+.contact-method:hover .contact-method-arrow {
+  color: #fff;
+}
+
+.contact-method:hover .contact-method-icon {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.contact-method:hover .contact-method-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* Keep the red-card interaction accessible by keyboard too. */
+.contact-method:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-method,
+  .contact-method-icon,
+  .contact-method-arrow,
+  .contact-method-detail {
+    transition: none;
+  }
+}

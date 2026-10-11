@@ -19,8 +19,7 @@ function About() {
 
                 <div className="about-copy">
                     <p className="about-lead">
-                        Currently an undergraduate exploring how technology and
-                        design can come together to solve meaningful problems.
+                        Pursuing an Honours degree in Information and Communication Technology at the University of Colombo, with an interest in thoughtful design and practical technology.
                     </p>
 
                     <p>
