@@ -2207,3 +2207,17 @@
     transition: none;
   }
 }
+
+/* Awards empty state: retain the existing divider row, but let the label use its full width. */
+.awards-placeholder.awards-empty-state {
+  display: flex;
+  min-height: 88px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 24px 0;
+}
+
+.awards-placeholder.awards-empty-state .placeholder-label {
+  grid-column: auto;
+  text-align: left;
+}

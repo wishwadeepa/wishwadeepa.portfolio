@@ -1,4 +1,3 @@
-
 import SectionHeading from '../components/SectionHeading'
 import { projects } from '../data/portfolio'
 
@@ -25,32 +24,53 @@ function Projects() {
             </div>
 
             <div className="projects-list">
-                {projects.map((project) => (
-                    <article className="project-item" key={project.number}>
-                        <div className="project-number">{project.number}</div>
+                {projects.map((project) => {
+                    const cardContent = (
+                        <>
+                            <div className="project-number">{project.number}</div>
 
-                        <div className="project-copy">
-              <span className="project-category">
-                {project.category}
-              </span>
+                            <div className="project-copy">
+                                <span className="project-category">
+                                    {project.category}
+                                </span>
 
-                            <h3>{project.title}</h3>
-                            <p>{project.description}</p>
-                        </div>
+                                <h3>{project.title}</h3>
+                                <p>{project.description}</p>
+                            </div>
 
-                        <div className="project-meta">
-                            <span>{project.status}</span>
-                            <span className="project-arrow" aria-hidden="true">
-                ↗
-              </span>
-                        </div>
-                    </article>
-                ))}
+                            <div className="project-meta">
+                                <span>{project.status}</span>
+                                {project.href && (
+                                    <span className="project-arrow" aria-hidden="true">
+                                        ↗
+                                    </span>
+                                )}
+                            </div>
+                        </>
+                    )
+
+                    return project.href ? (
+                        <a
+                            className="project-item"
+                            href={project.href}
+                            key={project.number}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ color: 'inherit', textDecoration: 'none' }}
+                            aria-label={`${project.title} — open live project in a new tab`}
+                        >
+                            {cardContent}
+                        </a>
+                    ) : (
+                        <article className="project-item" key={project.number}>
+                            {cardContent}
+                        </article>
+                    )
+                })}
             </div>
 
             <p className="section-footnote">
-                Add repository links, live demos, screenshots, and verified
-                outcomes as each project becomes ready to present.
+                Selected work reflects projects at different stages of development.
             </p>
         </section>
     )

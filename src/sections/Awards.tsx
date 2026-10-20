@@ -1,4 +1,3 @@
-
 import SectionHeading from '../components/SectionHeading'
 
 function Awards() {
@@ -23,20 +22,8 @@ function Awards() {
                 </p>
             </div>
 
-            <div className="awards-placeholder">
-        <span className="awards-symbol" aria-hidden="true">
-          +
-        </span>
-
-                <div>
-                    <h3>A space for verified achievements.</h3>
-                    <p>
-                        Add real certificates, awards, and relevant qualifications,
-                        including their dates and issuing organisations.
-                    </p>
-                </div>
-
-                <span className="placeholder-label">AWAITING ENTRIES</span>
+            <div className="awards-placeholder awards-empty-state">
+                <span className="placeholder-label">YET TO SHOWCASE</span>
             </div>
         </section>
     )

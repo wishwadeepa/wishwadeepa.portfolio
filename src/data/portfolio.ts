@@ -1,4 +1,3 @@
-
 export type Skill = {
     number: string
     title: string
@@ -12,6 +11,7 @@ export type Project = {
     category: string
     description: string
     status: string
+    href?: string
 }
 
 export type NavigationItem = {
@@ -54,26 +54,19 @@ export const skills: Skill[] = [
 export const projects: Project[] = [
     {
         number: '01',
+        title: 'What Should I Watch?',
+        category: 'WEB APPLICATION',
+        description:
+            'A movie discovery app that helps users find something to watch.',
+        status: 'COMPLETED',
+        href: 'https://pickmywatches.vercel.app/',
+    },
+    {
+        number: '02',
         title: 'Numa notes',
         category: 'MOBILE APPLICATION',
         description:
             'A notes app concept exploring contextual connections, thoughtful interaction, and a calmer way to organise knowledge.',
         status: 'IN DEVELOPMENT',
-    },
-    {
-        number: '02',
-        title: 'Eco-Sense',
-        category: 'ENVIRONMENTAL TECHNOLOGY',
-        description:
-            'A concept for community-powered environmental monitoring using smartphone sensors and location-aware alerts.',
-        status: 'CONCEPT',
-    },
-    {
-        number: '03',
-        title: 'More to come',
-        category: 'SELECTED WORK',
-        description:
-            'Reserved for another project demonstrating practical technical skills.',
-        status: 'PLACEHOLDER',
     },
 ]
